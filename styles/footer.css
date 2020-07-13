@@ -1,0 +1,22 @@
+footer {
+  background-color: rgba(0, 60, 113, 0.9);
+  color: white;
+  flex: 0;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer div p:first-child {
+  flex-grow: 3;
+  margin-left: 1em;
+}
+
+footer div p {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=footer.css.map */

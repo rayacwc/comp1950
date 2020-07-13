@@ -1,0 +1,17 @@
+#container {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 735px) {
+  #container {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+/*# sourceMappingURL=container.css.map */

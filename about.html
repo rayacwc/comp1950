@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/document.css">
+        <title>COMP 1950 About</title>
+        <script
+                  src="https://code.jquery.com/jquery-3.5.1.js"
+                  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+                  crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div>
+                    <div><a href="index.html"><img src="images/bcit-logo.png"></a>
+                        <a href="javascript:void(0);" class="icon" onclick="menuVisible()">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </a></div>
+                </div>
+                <div><a class="navlink" href="about.html">Course Outline</a></div>
+                <div><a class="navlink" href="schedule.html">Schedule</a></div>
+                <div><a class="navlink" href="lessons.html">Lessons</a></div>
+                <div><a class="navlink" href="contact.html">Contact</a></div>
+
+            </nav>
+        </header>
+        <main>
+            <div id="banner">
+                <div id="textOver">Course Outline</div>
+                <img src="images/banner.png " alt="banner">
+            </div>
+            <div class="aboutContent">
+                <article>
+                    <h2>Course Outline</h2>
+                    <p>Course: Comp 1950</p>
+                    <p>Length: 12 x 3 hr classes (36 hours total)</p>
+                </article>
+                <article>
+                    <h2>Course Description</h2>
+                    <p>
+                        This hands-on course follows on from COMP 1850 Applied Web Development Level 1. Students who already understand HTML and CSS will explore web development in more depth with new topics and techniques. Participants will gain a deeper understanding of the latest technologies including HTML5 and CSS3 for developing web sites and applications. There is a focus on responsive design and mobile presentation through the use of Media Queries. Adding behavior to web sites using JavaScript frameworks such as jQuery is introduced. Labs and exercises focus on industry standard web development methodology. Students gain experience creating templates for content management systems and presentation. Additional topics will include: source control for managing your code, and web-based fonts for professional typography.
+                        By the end of this course successful students will be able to build dynamic and semantically marked-up content that is viewable on mobile and desktop screen sizes.      
+                    </p>
+                </article>
+                <article>
+                    <h2>Course Learning Outcomes</h2>
+                    <p>
+                        Upon successful completion of this course, the student will be able to:
+                    </p>
+                    <ul>
+                        <li>To gain a deeper understanding of HTML, CSS and advanced topics in web development.</li>
+                        <li>To focus on best practices in web page and web site design.</li>
+                        <li>Add behaviour to any web page using JavaScript.</li>
+                        <li>Create dynamic content using JavaScript frameworks like jQuery.</li>
+                        <li>Employ Web Standards when building web sites for maximum compatibility.</li>
+                        <li>Understand basic development methodology.</li>
+                        <li>Use media queries to create responsive designs for mobile and desktop presentation</li>
+                        <li>Use HTML5 technologies to present rich content such as video and audio.</li>
+                        <li>Create professional looking typography using web-based fonts.</li>
+                        <li>Understand source control using GIT.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h2>Evaluation Criteria</h2>
+                    <table>
+                        <tr>
+                            <th>Assessment</th>
+                            <th>Grade Worth</th>
+                        </tr>
+                        <tr>
+                            <td>Assignments 1-7</td>
+                            <td class="center">20% (2.86% per assignment)</td>
+                        </tr>
+                        <tr>
+                            <td>Project 1</td>
+                            <td class="center">20%</td>
+                        </tr>
+                        <tr>
+                            <td>Mid-Term Exam</td>
+                            <td class="center">10%</td>
+                        </tr>
+                        <tr>
+                            <td>Final Exam</td>
+                            <td class="center">20%</td>
+                        </tr>
+                        <tr>
+                            <td>Final Project</td>
+                            <td class="center">30%</td>
+                        </tr>
+                    </table>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>British Columbia Institute of Technology  ©2020 For Education Purposes</p>
+                <p>3700 Willingdon Ave.<br>
+                    (604)432-8379
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        menuVisible = function()
+        {
+            $("header nav div:not(:first-child)").toggle();
+            console.log("done");
+        }
+    });
+</script>
+</html>

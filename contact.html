@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/document.css">
+    <title>BCIT COMP 1950 Contact</title>
+    
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+              crossorigin="anonymous"></script>
+              <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="script/script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div>
+                    <div><a href="index.html"><img src="images/bcit-logo.png"></a>
+                        <a href="javascript:void(0);" class="icon" onclick="menuVisible()">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </a></div>
+                </div>
+                <div><a class="navlink" href="about.html">Course Outline</a></div>
+                <div><a class="navlink" href="schedule.html">Schedule</a></div>
+                <div><a class="navlink" href="lessons.html">Lessons</a></div>
+                <div><a class="navlink" href="contact.html">Contact</a></div>
+
+            </nav>
+        </header>
+        <main>
+            <div id="banner">
+                <div id="textOver">Contact</div>
+                <img src="images/banner.png " alt="banner">
+            </div>
+            <div id="content">
+                <article>
+                </article>
+                <article>
+                </article>
+                <article>
+                    <h2>Contact Us</h2>
+                    <div id="contact">
+                    <form action="" id="contactForm">
+                        <fieldset>
+                        First Name:<br><input type="text" id="firstname" name="firstname" required><br>
+                        Last Name: <br><input type="text" id="lastname" name="lastname" required><br>
+                        Email:<br><input type="email" id="email" name="email" required><br>
+                        Student Number:<br><input type="text" id="studentNumber" name="studentNumber" required><br>
+                        <radio>
+                            <label for="status1"> Prospective</label>
+                            <input type="radio" id="status1" name="drone" value="prospective" checked>
+                            <label for="status2">Current</label>
+                            <input type="radio" id="status2" name="drone" value="current">
+                        </radio>
+                        <textarea></textarea>
+                        </fieldset>
+                        <input type="submit" value="Submit"/>
+                    </form>
+                    <div id="message">
+                        <p></p>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>British Columbia Institute of Technology  ©2020 For Education Purposes</p>
+                <p>3700 Willingdon Ave.<br>
+                    (604)432-8379
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        menuVisible = function()
+        {
+            $("header nav div:not(:first-child)").toggle();
+            console.log("done");
+        }
+    });
+</script>
+</html>

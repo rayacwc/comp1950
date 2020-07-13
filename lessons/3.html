@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/document.css">
+    <title>BCIT COMP 1950 Lesson 3</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			  crossorigin="anonymous"></script>
+		
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div>
+                    <div><a href="../index.html"><img src="images/bcit-logo.png"></a>
+                        <a href="javascript:void(0);" class="icon" onclick="menuVisible()">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </a></div>
+                </div>
+                <div><a class="navlink" href="../about.html">Course Outline</a></div>
+                <div><a class="navlink" href="../schedule.html">Schedule</a></div>
+                <div><a class="navlink" href="../lessons.html">Lessons</a></div>
+                <div><a class="navlink" href="../contact.html">Contact</a></div>
+
+            </nav>
+        </header>
+        <main>
+            <div id="banner">
+                <div id="textOver">Lesson 3</div>
+                <img src="../images/banner.png " alt="banner">
+            </div>
+            <div class="aboutContent">
+                <article class="lesson">
+                    <h2>Agenda</h2>
+                    <ul>
+                        <li>Referencing Stylesheets</li>
+                        <li>Importing</li>
+                        <li>Fonts</li>
+                        <li>Compact CSS</li>
+                        <li>Advanced Selectors</li>
+                        <li>Rule Specificity</li>
+                        <li>To Do</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Referencing CSS</h2>
+                    <p>When linking to external style sheets, there are a number of features to be aware of:</p>
+                    <ul>
+                        <li>Each stylesheet requires it's own link tag</li>
+                        <li>Multiple stylesheets can be loaded (main.css, fonts.css, layout.css, etc)</li>
+                        <li>rel determines how the HTML will use the file linked to (REQUIRED)</li>
+                        <li>href defines the path, relative or absolute, to the css file (REQUIRED)</li>
+                        <li>type attribute is has been deprecated (dropped in HTML5)</li>
+                        <li>title attribute allows the user to group stylesheets</li>
+                        <li>media attribute allows you to specify what medium this should be viewed in</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Media variations: media attribute</h2>
+                    <ul>
+                        <li>media="type" can be a powerful tool</li>
+                        <li>Examples of media types:</li>
+                        <ul>
+                            <li>all - well supported, commonly used (DEFAULT)</li>
+                            <li>aural</li>
+                            <li>braille</li>
+                            <li>embossed</li>
+                            <li>handheld - not common (smart phones identify as screen)</li>
+                            <li>print - well supported, commonly used</li>
+                            <li>projection</li>
+                            <li>screen - well supported, commonly used</li>
+                            <li>tty</li>
+                            <li>tv</li>
+                        </ul>
+                        <li>Note that most smart phone devices (iPhones, Andriod, etc) do not identify themselves as media type handheld. The reasoning was that the devices were more than capable of displaying standard web sites, so they identify as screen</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Alternate style sheets: rel attribute</h2>
+                    <p>You can also have alternate stylesheets supported</p>
+                    <ul>
+                        <li>rel="stylesheet" defines the default stylesheets to use</li>
+                        <li>rel="alternate stylesheet" allows different styles to be defined</li>
+                        <li>Tip: If you have multiple sheets that belong to one "look" make sure they all have the same title</li>
+                        <li>You can create alternate style sheets for users, allowing them to select which ones they would like to see</li>
+                        <li>An example would be to create a 'Larger Text' style sheet with everything in a larger font, or providing an option for users to choose an austere, simple page instead of a colorful/image heavy stylesheet</li>
+                        <li>Many browsers are now giving users the ability to select which sheet they would like to
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Alternate style sheets: title attribute</h2>
+                    <p>You can also have alternate stylesheets supported</p>
+                    <ul>
+                        <li>A stylesheet is "persistent" if it is linked with rel="stylesheet" and has no title attribute. All persistent stylesheets are always used when rendering</li>
+                        <li>A stylesheet is "preferred" if it is linked with rel="stylesheet" and has a title attribute. these styles will be used as the default. preferred stylesheets with the same title are grouped together</li>
+                        <li>Finally, a stylesheet is "alternate" if it is linked with rel="alternate stylesheet" and has a title. These stylesheets are supposed to allow the user to choose stylesheets, they are grouped together by title and show up in the browser's stylesheet selector if it has one (View > Page Style in Firefox). Each group (by title) is mutually exclusive.</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>CSS Measurements</h2>
+                    <p>In CSS, there are a number of measurement values that can be used in declarations.</p>
+                </article>
+                <article class="lesson">
+                    <h2>Size measurements</h2>
+                    <p>In CSS, there are a number of measurement values that can be used in declarations.</p>
+                    <ul>
+                        <li>px - Pixels is one of the most common measuring types. It is specific to computers, as it renders based on the pixel-display of all monitors. Great for specific measurements on boxes and borders, but for fonts, it can lead to difficulty as some browsers don't allow scaling and font can end up too small</li>
+                        <li>% - Percentage measurements are also very common.</li>
+                        <li>em - A relative measurement of the letter "m" in the chosen font. This is a popular one for spacing around text, as it inherits the font dimensions</li>
+                        <li>rem - Similar to em, this will inherit only the Root value, helpful for avoiding 'compound inheritance' values</li>
+                        <li>pt - Points is an aold system related to type-setting that had a standard size for points. This is a relative size based on the users' system</li>
+                        <li>pc - Picas is a very old system that was frequently related to typewritten documents. Rarely used.</li>
+                        <li>ex - Similar to em, this is a relative measurement of the letter "x". However, it is rarely used, and not fully supported</li>
+                        <li>vh, vw, vmin, vmax - size relative to viewport widths and heights. very useful for scaling, though may not enjoy full support yet</li>
+                        <li>named - This refers to fonts and a few other elements. The named sizes are xx-small, x-small, small, medium, large, x-large, xx-large. They are relative to the browsers base font size</li>
+                    </ul>
+                </article>        
+                <article class="lesson">
+                    <h2>Color Measurement</h2>
+                    <p>Colors can be specified in a number of ways, corresponding to the system that your organization or visual element requires. Almost all color systems use a method for expressing a combination of the three color spaces used for displaying colors on computer monitors: Red Green and Blue.</p>
+                    <ul>
+                        <li>Hex: #003366 - One of the most common systems, it combines 2 digits each for Red Green and Blue. Each hex pair stand stands for digits between 00 and FF in hexadecimal</li>
+                        <li>Compact Hex: #f30 - This is almost identical to the Hex version, except that when three numbers are used, most browsers will just double-up each digit. So, #f30 will become #ff3300</li>
+                        <li>Named: cornflowerblue - Although the official W3C specification only lists 16 named colors, almost every browser supports the various named colors</li>
+                        <li>RGB: rgb(255, 0, 255) - This allows the user to specify the same thing as Hex, but in Decimal format</li>
+                        <li>RGB %: rgb(100%, 0%, 50%) - Almost identical to RGB, but with percentages of each color space instead</li>
+                    </ul>
+                </article> 
+                <article class="lesson">
+                    <h2>Compact CSS Code</h2>
+                    <p>When building your CSS rules, there are some easy ways to compact your code, reducing code bloat and filesize.</p>
+                </article> 
+                <article class="lesson">
+                    <h2>Grouping selectors</h2>
+                    <ul>
+                        <li>If you would like to apply the same style to a multitude of different selectors, you can group them with the comma</li>
+                        <li>h1, h2, h3, h4, h5 { color: red; }</li>
+                        <li>This can be done with Elements, classes and IDs</li>
+                        <li>Specific rules for H3 (for example) can come later</li>
+                    </ul>
+                </article> 
+                <article class="lesson">
+                    <h2>Grouping comes to Classes</h2>
+                    <ul>
+                        <li>As well as grouping Elements, you can also group classes</li>
+                        <li>Define several classes: .cool{ color:red; } .wicked { border:1px solid black; }</li>
+                        <li>The order of the attribute values is irrelevant</li>
+                        <li>Case is important! Remember to use a single rule for CSS naming and stick with it</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Rule Compacting</h2>
+                    <p>There are a lot of rules that will accept a compacted ruleset:</p>
+                    <ul>
+                        <li>margin: top right bottom left;</li>
+                        <li>padding: top right bottom left;</li>
+                        <li>border: width style color;</li>
+                        <li>font: font-style font-variant font-weight font-size/line-height font-family;</li>
+                        <li>background: color image position repeat size attachment;</li>
+                    </ul>
+                    <p>Box model properties support 1, 2, 3 and 4 values. For example:</p>
+                    <ul>
+                        <li>border-width:10px;</li>
+                        <ul>
+                            <li>all four borders are 10px</li>
+                        </ul>
+                        <li>border-width:10px 20px;</li>
+                        <ul>
+                            <li>top and bottom borders are 10px</li>
+                            <li>left and right borders are 20px</li>
+                        </ul>
+                        <li>border-width:10px 20px 30px;</li>
+                        <ul>
+                            <li>top border is 10px</li>
+                            <li>left and right borders are 20px</li>
+                            <li>bottom border is 30px</li>
+                        </ul>
+                        <li>border-width:10px 20px 30px 40px;</li>
+                        <ul>
+                            <li>top border is 10px</li>
+                            <li>right border is 20px</li>
+                            <li>bottom border is 30px</li>
+                            <li>left border is 40px</li>
+                        </ul>
+                    </ul>
+                    <p>Note you do not need to specify values for all fields in a compact rule. Just keep the space delimited list in the correct order. For example, you could specify several font values all at once:
+                        font: italic small-caps bold 1.3em "helvetica", sans-serif; 
+                        or, specify only a select couple.
+                        </p>
+                </article>
+                <article class="lesson">
+                    <h2>CSS Selectors</h2>
+                    <p>There are several advanced CSS selector techniques that provide plenty of options for the application of style</p>
+                </article>     
+                <article class="lesson">
+                    <h2>Universal Selector</h2>
+                    <ul>
+                        <li>This is a fairly widely supported selector: the asterisk *</li>
+                        <li>Use it to specify a global rule</li>
+                        <li>* { color: red; } will make all font color red on your page</li>
+                        <li>The universal selector can be very powerful, as it can command a lot of changes to your styles,</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Pseudo-classes</h2>
+                    <p>A Pseudo-class is a selector that allows you to reference a specific action or attribute of an element. This is most often used when specifying a attributes, such as :visited and :link.
+                        There are other uses for pseudo elements, that will allow for greater detail in styling content, such as :first-letter and :first-line. These allow the browser to apply a style based on an unselected, but displayed element.
+                        </p>
+                    <p>Best part: No span or div required to access these pseudo-elements.</p>
+                    <ul>
+                        <li>Within a pseudo-elements in particular, it's important to follow a certain order:</li>
+                        <ul>
+                            <li>a:link</li>
+                            <li>a:visited</li>
+                            <li>a:hover</li>
+                            <li>a:active</li>
+                        </ul>
+                    </ul>
+                    <p>Easy mnemonic: LVHA - LoVe - HAte. Because of the way that CSS applies rules, it looks at the LAST rule for a given element and applies more weight to it. For example, if you are hovering over a link, you don't want to see the link state</p>
+                    <ul>
+
+                        <li>There are several additional pseudo-classes and pseudo-elements</li>
+                            <ul>
+                                <li>selector:before, selector:after - add text content before or after the selector's content</li>
+                                <li>selector:first-line, selector:first-letter - style the first line or letter of the selector</li>
+                                <li>selector:first-of-type, selector:last-of-type - style the first or last tag of the selector type</li>
+                                <li>selector:nth-of-type(n) - select the nth() tag of the same type as selector</li>
+                                <li>selector:nth-child(n) - select the nth() child</li>
+                                <li>selector:nth-child(2n) - select every even numbered child</li>
+                                <li>selector:nth-child(2n+1) - select every odd numbered child</li>
+                            </ul>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Descendant Selectors</h2>
+                    <ul>
+                        <li>Separated by a space, the last element is the one being styled</li>
+                        <li>h1 em will apply rules to all em's within an h1</li>
+                        <li>You can have as many as you want: ul ol ul li</li>
+                        <li>Great for specifying different styles when they apply only in certain areas</li>
+                        <li>#nav a { ... } will only apply these rules to Anchors within the div called nav</li>
+                        <li>Degree of separation can be infinite, so be careful</li>
+                        <li>p em will match ANY em that descends from a paragraph, no matter how nested</li>
+                    </ul>
+                </article>       
+                <article class="lesson">
+                    <h2>Child Selectors</h2>
+                    <ul>
+                        <li>Uses the > combinator to specify children</li>
+                        <li>Will select an element that is directly descended from another element</li>
+                        <li>p > strong will only select a strong tag that is inside a paragraph</li>
+                        <li>Will not select a strong tag embedded in any other tag (even if it is within a paragraph)</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>To Do</h2>
+                    <ul>
+                        <li>Download, review, and complete the homework assignment from D2L</li>
+                        <li>Find a partner for your homework.</li>
+                        <li>Practice using advanced CSS selectors</li>
+                    </ul>
+                </article>                                                                   
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>British Columbia Institute of Technology  ©2020 For Education Purposes</p>
+                <p>3700 Willingdon Ave.<br>
+                    (604)432-8379
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        menuVisible = function()
+        {
+            $("header nav div:not(:first-child)").toggle();
+            console.log("done");
+        }
+    });
+</script>
+</html>

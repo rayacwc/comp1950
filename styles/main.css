@@ -1,0 +1,271 @@
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+#content {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "one two" "three three";
+  border-top-style: solid;
+  border-width: 1em;
+  border-color: rgba(0, 60, 113, 0.8);
+}
+
+.aboutContent {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  border-top-style: solid;
+  border-width: 1em;
+  border-color: rgba(0, 60, 113, 0.8);
+}
+.aboutContent article p {
+  line-height: 1.2em;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.aboutContent article ul, .aboutContent ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.aboutContent article ol li {
+  flex: 1;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.aboutContent article ul li {
+  flex: 1;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.aboutContent article ul li li {
+  margin-left: 0;
+  margin-right: 20%;
+}
+.aboutContent article table {
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: none;
+}
+.aboutContent article table .center {
+  text-align: center;
+}
+.aboutContent article table tr td {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#schedule {
+  display: flex;
+  flex-direction: column;
+}
+#schedule div {
+  margin-left: 20%;
+  background-color: white;
+  margin-right: 20%;
+  margin-top: 0%;
+  border-style: inset;
+  border-width: 0.2em;
+  margin-bottom: 0.1em;
+  border-color: rgba(0, 60, 113, 0.4);
+  color: #003c71;
+}
+#schedule div h4 {
+  margin: 0;
+}
+#schedule .dayInfo {
+  border: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#schedule .dayInfo a {
+  text-decoration: none;
+}
+#schedule .dayInfo a:visited, #schedule .dayInfo :hover, #schedule .dayInfo :active {
+  color: blue;
+}
+
+.lesson p {
+  margin: 0;
+}
+
+.lesson p:last-child {
+  margin-bottom: 1em;
+}
+
+.lesson ul {
+  justify-content: left;
+  align-content: center;
+}
+
+.lesson p ul:first-child {
+  margin-left: 20%;
+}
+
+.lesson img {
+  margin-left: 25%;
+  margin-right: 25%;
+  min-width: 50%;
+  max-width: 50%;
+}
+
+main div article {
+  background-color: rgba(0, 60, 113, 0.5);
+  margin: 0.5em;
+}
+
+main div article p {
+  margin: 2em;
+}
+
+main div article:nth-child(1) {
+  grid-area: one;
+}
+
+main div article:nth-child(2) {
+  grid-area: two;
+}
+
+main div article:nth-child(3) {
+  grid-area: three;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+main div article:nth-child(3) #lessons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main div article:nth-child(3) #lessons div {
+  background-color: orange;
+  max-width: 200px;
+  min-width: 200px;
+  margin: 0.5em;
+  border-radius: 0.7em;
+  border-style: solid;
+  border-color: rgba(0, 60, 113, 0.4);
+  border-width: 0.1em;
+}
+
+.link {
+  display: block;
+  margin: 0;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+main div article:nth-child(3) #lessons div a {
+  text-decoration: none;
+}
+
+main div article h2 {
+  text-align: center;
+  color: rgba(0, 60, 113, 0.3);
+}
+
+#textOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+#banner {
+  position: relative;
+  font-size: 2em;
+  margin: 0;
+}
+
+audio {
+  margin-left: 40%;
+  margin-right: auto;
+}
+
+form {
+  text-align: left;
+  margin-left: 30%;
+  margin-right: 30%;
+  min-width: 300px;
+}
+
+form input:not([type=radio]) {
+  width: 100%;
+}
+
+.error {
+  font-size: 0.8em;
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.icon {
+  display: none;
+  line-height: 4em;
+  height: 4em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 735px) {
+  .navlink {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: auto;
+    width: 50%;
+    margin-right: 0em;
+  }
+
+  .fa-3x {
+    float: right;
+    margin-right: 0.5em;
+  }
+
+  header nav div:first-child {
+    flex-shrink: 0;
+    height: 100%;
+  }
+
+  header nav div:not(:first-child) a {
+    display: block;
+  }
+
+  header nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  header nav div:first-child {
+    flex-basis: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  #content {
+    grid-template-columns: 1fr;
+    grid-template-areas: "one" "two" "three";
+  }
+
+  header nav div div a {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

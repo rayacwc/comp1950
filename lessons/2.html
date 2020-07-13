@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/document.css">
+    <title>BCIT COMP 1950 Lesson 2</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			  crossorigin="anonymous"></script>
+		
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <div>
+                    <div><a href="../index.html"><img src="images/bcit-logo.png"></a>
+                        <a href="javascript:void(0);" class="icon" onclick="menuVisible()">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </a></div>
+                </div>
+                <div><a class="navlink" href="../about.html">Course Outline</a></div>
+                <div><a class="navlink" href="../schedule.html">Schedule</a></div>
+                <div><a class="navlink" href="../lessons.html">Lessons</a></div>
+                <div><a class="navlink" href="../contact.html">Contact</a></div>
+
+            </nav>
+        </header>
+        <main>
+            <div id="banner">
+                <div id="textOver">Lesson 2</div>
+                <img src="../images/banner.png " alt="banner">
+            </div>
+            <div class="aboutContent">
+                <article class="lesson">
+                    <h2>Agenda</h2>
+                    <ul>
+                        <li>Charsets</li>
+                        <li>HTML, XHTML, HTML5</li>
+                        <li>Semantics</li>
+                        <li>Forms, SVG, Multimedia</li>
+                        <li>To Do</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Character Sets And Language</h2>
+                    <p>The W3C recommends the UTF-8 charset for web development. It includes an impressive array of languages and special characters, and is well supported in common devices.
+                    </p>
+                </article>
+                <article class="lesson">
+                    <h2>Assign Character Set</h2>
+                    <p>If it is not specified, a web browser will choose the character set it thinks is most appropriate, but it is a better practice for the developer to ensure the correct character set by applying the <b>meta</b> tag to the <b>head</b> section of every HTML page:
+                    </p>
+                    <ul>
+                        <li>Write all your text-based code (.html, .css, .js, .php, etc) in UTF-8. At development time, ensure your text editor is saving files in this format. This setting is usually found in the application's Preferences menu option.</li>
+                        <li>Unless your audience includes very old browsers, you can <a href="https://tools.oratory.com/altcodes.html">code special characters</a> directly into the HTML (you dont need to use HTML entities for most special characters).</li>
+                        <li>You cannot copy-paste rich text (such as Microsoft Word, or WordPad) into your HTML. The rich text formatting may result in an unreadable mess</li>
+                        <li>An HTTP server can over-ride your charset preferences when it generates the HTTP header. Details on how to control this will be discussed later in this course.</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>HTML lang Attribute</h2>
+                    <p>Use the <b>lang=""</b> attribute to <a href="https://www.w3.org/International/questions/qa-html-language-declarations">declare the language in HTML</a>. This is usually applied to the html element. Assigning the appropriate language code will apply to all contained content, unless over-ridden with another <b>lang=""</b>.
+                        Use the language abbreviations from the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">standard ISO 639-1</a> code set (don't use ISO 639-2).
+                        </p>
+                </article>
+                <article class="lesson">
+                    <h2>HTML</h2>
+                    <p>What started as a language defined by <a href="http://www.w3.org/MarkUp/SGML/">SGML</a> (Standard Generalized Markup Language), HTML is used to mark up billions of pages, making up the bulk of the web.</p>
+                    <ul>
+                        <li>Late 1991, Tim Berners-Lee releases the first iteration of what would become HTML 2.0 (there was no real 1.0+)</li>
+                        <li>HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template</li>
+                        <li>Over the next decade, various additions, improvements and changes are introduced</li>
+                        <li>HTML 4.01 released in December 1999</li>
+                        <li>Initially used for documents and a place for the technically inclined, the web did not have the international pervasiveness it does today</li>
+                        <li>Most developers were new to the language and there were no real classes in it</li>
+                        <li>People had to learn as they went along</li>
+                        <li>A lot of early sites are poorly designed</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>HTML 4.01 template</h2>
+                    <p>The problem with the state of HTML then was its reputation as a loose language. Poorly structured code would be rendered differently across user agents, leading to forked code and less predictable results.</p>
+                </article>
+                <article class="lesson">
+                    <h2>HTML 4.01 template</h2>
+                    <p>The problem with the state of HTML then was its reputation as a loose language. Poorly structured code would be rendered differently across user agents, leading to forked code and less predictable results.</p>
+                </article>
+                <article class="lesson">
+                    <h2>XHTML</h2>
+                    <p>The <a href="https://www.w3.org/TR/2002/REC-xhtml1-20020801/">XHTML specification</a> was the result of rewriting <a href="https://www.w3.org/TR/1999/REC-html401-19991224/">HTML 4.01</a> using the ruleset derived from <a href="https://www.w3.org/XML/">XML</a></p>
+                    <ul>
+                        <li>HTML 4.01 + XML = XHTML 1.0</li>
+                        <li>X = eXtensible</li>
+                        <li>X = XML related</li>
+                        <li>Better, more predictable coding patterns.</li>
+                        <li>Verifiable or "well-formed" code can be produced.</li>
+                        <li>Forces a higher standard of HTML.</li>
+                        <li>Predictable behavior across user agents.</li>
+                        <li>Porting to HTML5 is easy (if you also observe <b>semantic</b> guidelines).</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>HTML5</h2>
+                    <p>As of October 28, 2014, HTML5 is the official W3C recommendation
+                        HTML5 is more evolutionary then revolutionary. The bulk of previous HTML elements and attributes are maintained, with a few deprecations, and several additions.
+                        </p>
+                    <p>Significant features include:</p>
+                    <ul>
+                        <li>Ultra simple Doctype:</li>
+                        <li>Specifies how browsers should behave with imperfect code</li>
+                        <li>Ability to embed XML, MathML or SVG markup.</li>
+                        <li>Standardized Javascript API increases client side script compatibility across browsers</li>
+                        <li>Backwards compatible - older versions of HTML can effectively be updated by simply changing the doctype to HTML5</li>
+                        <li>Guiding principles: Enhance semantic coding, Support existing content, Pave the cowpaths</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>HTML5 Template</h2>
+                    <h2>Paving the Cowpaths</h2>
+                    <p>Common developer practices have been simplified
+                        </p>
+                    <ul>
+                        <li>Finally a DOCTYPE we can all remember:</li>
+                        <li>Declaring the character encoding is easier:</li>
+                        <li>When linking to external stylesheets the type attribute is not required:</li>
+                        <li>When embedding CSS the type attribute is not required:</li>
+                        <li>Including javascripts is simplified as well (type attribute is not required)</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>HTML5: Enhanced Semantic Coding</h2>
+                    <p>It is crucial for all HTML content to be <a href="https://en.wikipedia.org/wiki/Semantic_HTML">semantically marked up</a>. This is how browsers, search engines, and screen readers make sense of online content.
+                        </p>
+                    <p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:</p>
+                </article>
+                <article class="lesson">
+                    <h2>HTML5 Content Models</h2>
+                    <p>Pre-HTML5, there were basically two categories of tags: inline and block. HTML5 intoduces a more nuanced set of categories that allow for greater semantic sectioning of content. The content model will help the browser to determine the semantics of your content. </p>
+                </article>
+                <article class="lesson">
+                    <h2>Content Models</h2>
+                    <li>text-level content: most inline tags</li>
+                    <li>grouping content: most block tags</li>
+                    <li>replaced content: all the form widgets and related tags</li>
+                    <li>embedded content: video, audio, canvas</li>
+                    <li>sectioning content: new structural, semantic options</li>
+                </article>
+                <article class="lesson">
+                    <h2>Content Models</h2>
+                    <p>The section tag can be used to semantically group content. It can remove ambiguity when a page is being processed by the browser, a screen reader, or search engine.
+                        For example, imagine you have created the following code:
+                        Since content that follows a heading is presumed to be associated with that heading, the code above carries plenty of semantic value already. But, if the small tag's content is intended to apply to all cities, a browser has no way of knowing that. It will instead assume the small tag is associated with the preceding heading 
+                        Use the section tag to explicitly demarcate the start and end of the related content:
+                        This new sectioning will inform the browser that the small is associated with the h1
+                        In HTML5, each piece of sectioned content has its own self-contained outline. This means you wont need to worry as much about which level heading tag to use. You can use an h1 inside a section and it will be treated as the heading of the section, and have lesser semantic impact than an h1 that is at a higher level.
+                        </p>
+                </article>
+                <article class="lesson">
+                    <h2>Forms</h2>
+                    <p>HTML 5 adds several new form attributes that prove quite useful, even if some are as yet poorly supported.
+                        </p>
+                    <ul>
+                        <li>placeholder="value": prepopulates field with data</li>
+                        <li>autofocus="autofocus": sets the input to have cursor focus</li>
+                        <li>required="required": ensures field is filled in before submission</li>
+                        <li>There are also several new <input> type attribute variants:</li>
+                        <ul>
+                            <li>type="email": checkes for the pattern of emails</li>
+                            <li>type="url": web addesses</li>
+                            <li>type="date": calendar popup</li>
+                            <li>type="tel": telephone numbers</li>
+                            <li>type="search": formats text input as search input</li>
+                            <li>type="color": color picker popup</li>
+                            <li>type="range": sliding scales</li>
+                            <li>type="pattern": regular expression pattern matching</li>
+                        </ul>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Scaleable Vector Graphics</h2>
+                    <p>Scaleable Vector Graphics (SVG) can be embedded into HTML5 documents. SVG are 100% scalable without the pixelated effect that scaled raster images can suffer from. SVG file data is stored as text, so they are much smaller in file size than a raster equivalent.
+                        </p>
+                   <p>You can use SVG graphics with the <b>img</b> tag, just as with raster graphics. You can also use .svg as a CSS <b>background-image.</b></p>
+                   <img src="comp1950_logo.png" alt="COMP 1950 logo"/>
+                   <img src="comp1950_logo.svg" alt="COMP 1950 logo" />
+                   <p>Alternatively, you can use SVG code 'inline' with the svg tag. The advantage of doing this is it will result in one less request/response between the client and the server. The disadvantage to inline SVG is that it adds considerable clutter to your your .html code. Just copy the source code from your .svg file and paste it directly into your .html!</p>
+                </article>
+                <article class="lesson">
+                    <h2>SVG Tools</h2>
+                    <p>Use an SVG application to help you create and manipulate your SVG code.
+                        </p>
+                    <ul>
+                        <li>Adobe Illustrator</li>
+                        <li>Inkscape (Open source, Windows/Mac/Linux)</li>
+                    </ul>
+                </article>
+                <article class="lesson">
+                    <h2>Multimedia</h2>
+                    <p>HTML5's more responsive multimedia features have made it easier to provide appropriately formatted video and audio to the client.
+                        </p>
+                </article> 
+                <article class="lesson">
+                    <h2>Audio</h2>
+                    <p>The audio element provides a way to offer many audio formats to the client, allowing the browser to choose the one most suitable.
+                        </p>
+                    <p>The most common audio formats for the web are: <b>audio/mp3</b>, <b>audio/mpeg</b> and <b>audio/ogg.</b></p>
+                    <p>Each audio tag may contain:</p>
+                    <ul>
+                        <li>source tags as children of the audio tag, one for each audio format available. Each source must have a src (path to audio file) and type (audio file MIME type)</li>
+                        <li>controls="controls" give the user control over the audio *important for usability*</li>
+                        <li>loop="loop" loop audio playback</li>
+                        <li>preload="none" dont load the audio until the user clicks 'play', preload="metadata" preloads the clip duration statistic only, preload="auto" loads the audio clip to the client before they click 'play'</li>
+                        <li>autoplay="autoplay" begin playing audio as soon as page is loaded *NOT very user friendly*</li>
+                    </ul>
+                    <audio controls="controls">
+                        <source src="house-a-square.mpg" type="audio/mpeg" />
+                        <source src="house-a-square.mp3" type="audio/mp3" />
+                        <source src="house-a-square.ogg" type="audio/ogg" />
+                    </audio>
+                    
+                </article>
+                <article class="lesson">
+                    <h2>Video</h2>
+                    <p>The video element provides a way to offer many video formats to the client, allowing the browser to choose the one most suitable.</p>
+                    <p>The most common video formats for the web are: video/mp4, video/ogg and video/webm.</p>
+                </article>
+                <article class="lesson">
+                    <h2>To Do</h2>
+                    <ul>
+                        <li>Download, review, and complete the homework assignment from D2L</li>
+                        <li>Review the HTML5 semantic tags, know how and when to use them to maxmize the semantic strucure of your HTML</li>
+                    </ul>
+                </article>                                         
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>British Columbia Institute of Technology  ©2020 For Education Purposes</p>
+                <p>3700 Willingdon Ave.<br>
+                    (604)432-8379
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        menuVisible = function()
+        {
+            $("header nav div:not(:first-child)").toggle();
+            console.log("done");
+        }
+    });
+</script>
+</html>
